@@ -1,14 +1,9 @@
-import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '../../components/EditScreenInfo';
-import { Text, View } from '../../components/Themed';
-import { TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, NavigationContainer, createNativeStackNavigator } from 'react-native';
 
 
-
-export default function Home() {
+const HomePage = () => {
   return (
-    
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to the FRCS library!</Text>
       <TouchableOpacity
@@ -23,8 +18,7 @@ export default function Home() {
       </TouchableOpacity>
     </View>
   );
-}
-
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -51,3 +45,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+export default HomePage;
