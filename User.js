@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 const MyBooks = () => {
   return (
     <View>
-      <Text>Your Books go here!</Text>
+      <Text>Your Books go There!</Text>
     </View>
   );
 };
