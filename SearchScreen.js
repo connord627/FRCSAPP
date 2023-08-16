@@ -16,7 +16,7 @@ const SearchScreen = () => {
         onChangeText={handleSearchTextChange}
         value={searchText}
         style={styles.inputBox}
-        placeholder='Search'
+        placeholder='Enter Book Title'
         placeholderTextColor='gray'
         backgroundColor='white'
       />
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     color: 'black',
   },
   titleText: {
-    fontSize: 30,
+    fontSize: 27,
     color: '#10148F',
     fontWeight: 'bold',
   },
