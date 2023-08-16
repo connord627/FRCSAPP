@@ -1,22 +1,40 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { NavigationContainer} from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
-const HomePage = () => {
+import HomeScreen from './HomeScreen';
+import MyBooks from './User';
+
+const BottomTab = createBottomTabNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Welcome to the FRCS library!</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => console.log('Button Pressed')}>
-        <Text style={styles.buttonText}>Search Books</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => console.log('Button Pressed')}>
-        <Text style={styles.buttonText}>My Books</Text>
-      </TouchableOpacity>
-    </View>
+    <NavigationContainer>
+      <BottomTab.Navigator
+            screenOptions={({ route }) => ({
+            tabBarIcon: ({ color, size }) => {
+                let iconName;
+
+                if (route.name === 'Search') {
+                  iconName = 'search-outline';
+                }
+                else if (route.name === 'Home') {
+                iconName = 'home-outline';
+                }
+                else if (route.name === 'Profile') {
+                iconName = 'person-outline';
+                }
+
+                return <Ionicons name={iconName} size={size} color={color} />;
+            },
+            })}
+        >
+        <BottomTab.Screen name = "Home" component={HomeScreen} />
+        <BottomTab.Screen name = "Profile" component={MyBooks} />
+        </BottomTab.Navigator>
+    </NavigationContainer>
   );
 };
 
@@ -46,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomePage;
+export default App;
