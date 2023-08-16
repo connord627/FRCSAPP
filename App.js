@@ -2,10 +2,13 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
 
-import HomeScreen from './HomeScreen';
+
+import SearchScreen from './SearchScreen';
 import MyBooks from './User';
+
 
 const BottomTab = createBottomTabNavigator();
 
@@ -31,7 +34,7 @@ const App = () => {
             },
             })}
         >
-        <BottomTab.Screen name = "Home" component={HomeScreen} />
+        <BottomTab.Screen name = "Search" component={SearchScreen} />
         <BottomTab.Screen name = "Profile" component={MyBooks} />
         </BottomTab.Navigator>
     </NavigationContainer>

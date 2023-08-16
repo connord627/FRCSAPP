@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 
-const HomeScreen = () => {
+const SearchScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to the FRCS library!</Text>
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default SearchScreen;
