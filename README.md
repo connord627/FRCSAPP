@@ -1,5 +1,8 @@
 # FRCSAPP
 
+A virtual library app for FRCS developed with React Native
+
+
 # Packages installed:
 # @react-navigation/bottom-tabs
 # @expo/vector-icons
